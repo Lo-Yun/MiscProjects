@@ -7,10 +7,7 @@ Programmer: Lo-Yun Lee (josephleee@gmail.com), 2016
 import numpy as np
 
 def File2List(filename):
-    f = open(filename)
-    f_lst = f.readlines()
-    f.close()
-    return f_lst
+    with open(filename, 'r') as infile: return infile.readlines()
 
 #### Boolean ####
 def contain_hessian(g09file):
